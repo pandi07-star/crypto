@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Exercises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<select onchange="show(this.value)">
+    <option value="">Select Exercise</option>
+    <option value="ex1">Exercises 1</option>
+    <option value="ex2">Exercises 2</option>
+</select>
+
+<div id="ex1" class="box" style="display:none">
+    <h3>Shift Cipher</h3>
+    <input id="sText" placeholder="Text">
+    <input id="sKey" type="number" placeholder="Key"><br>
+    <button onclick="shiftEncrypt()">Encrypt</button>
+    <button onclick="shiftDecrypt()">Decrypt</button>
+    <p id="sOut"></p>
+    <hr>
+    <h3>Hill Cipher</h3>
+    <select id="hSize">
+        <option value="2">2 x 2</option>
+        <option value="3">3 x 3</option>
+    </select><br>
+    <input id="hText" placeholder="Text"><br>
+    <button onclick="hillEncrypt()">Encrypt</button>
+    <button onclick="hillDecrypt()">Decrypt</button>
+    <p id="hOut"></p>
+</div>
+
+<div id="ex2" class="box" style="display:none">
+    <h3>Playfair Cipher</h3>
+    <input id="pKey" placeholder="Key"><br>
+    <input id="pText" placeholder="Text"><br>
+    <button onclick="playfairEncrypt()">Encrypt</button>
+    <button onclick="playfairDecrypt()">Decrypt</button>
+    <p id="pOut"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
